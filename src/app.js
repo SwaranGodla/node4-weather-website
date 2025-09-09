@@ -7,7 +7,9 @@ const geocode = require('./utils/geocode')
 
 
 const app = express()
-const port = 3000
+// const port = 3000
+const port = process.env.PORT || 3000;
+
 
 // path is a built-in module in node.js that provides utilities for working with file and directory paths.
 // __dirname is a special variable that represents the directory name of the current module.
