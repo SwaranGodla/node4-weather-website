@@ -32,7 +32,7 @@ app.use(express.static(publicDirectoryPath))
 
 
 app.get('', (req, res) => {
-  res.render('index',{
+  res.render('index', {
     title: 'Weather App',
     name: 'Swaran Singh'
   })
@@ -58,7 +58,7 @@ app.get('/about', (req, res) => {
 })
 
 app.get('/weather', (req, res) => {
-  if(!req.query.address) {
+  if (!req.query.address) {
     return res.send({
       error: 'You must provide an address!'
     })
@@ -107,6 +107,6 @@ app.get('*', (req, res) => {
 })
 
 
-app.listen(port, () => {
+app.listen(port, "0.0.0.0", () => {
   console.log(`Example app listening on port ${port}`)
 })
